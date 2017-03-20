@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.adityathakker.susadmin">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.HomeActivity"
+            android:label="@string/title_activity_home"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.activity.WorkshopsActivity"
+            android:label="@string/title_activity_workshops"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".ui.activity.HomeActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.adityathakker.susadmin.ui.activity.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".ui.activity.WorkshopDetailsActivity"
+            android:label="@string/title_activity_workshop_details"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".ui.activity.WorkshopsActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.adityathakker.susadmin.ui.activity.WorkshopsActivity" />
+        </activity>
+        <activity
+            android:name=".ui.activity.AddWorkshopActivity"
+            android:label="@string/title_activity_add_workshop"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".ui.activity.WorkshopsActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.adityathakker.susadmin.ui.activity.WorkshopsActivity" />
+        </activity>
+        <activity
+            android:name=".ui.activity.ResearchersActivity"
+            android:label="@string/title_activity_researchers"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".ui.activity.HomeActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.adityathakker.susadmin.ui.activity.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".ui.activity.AddResearcherActivity"
+            android:label="@string/title_activity_add_researcher"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".ui.activity.ResearchersActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.adityathakker.susadmin.ui.activity.ResearchersActivity" />
+        </activity>
+        <activity
+            android:name=".ui.activity.QuestionsActivity"
+            android:label="@string/title_activity_questions"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".ui.activity.HomeActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.adityathakker.susadmin.ui.activity.HomeActivity" />
+        </activity>
+        <activity
+            android:name=".ui.activity.EditQuestionActivity"
+            android:label="@string/title_activity_edit_question"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".ui.activity.QuestionsActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.adityathakker.susadmin.ui.activity.QuestionsActivity" />
+        </activity>
+    </application>
+
+</manifest>
